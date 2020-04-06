@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/nkcu_dialog_background">
+
+    <LinearLayout
+        android:layout_width="2200dp"
+        android:layout_height="800dp"
+        android:layout_marginTop="800dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:background="@color/dialogColor">
+
+        <TextView
+            android:id="@+id/tv_nkcu_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="128dp"
+            android:background="@color/grayColor"
+            android:textColor="@color/fontColor"
+            android:text="標題" />
+
+        <TextView
+            android:id="@+id/tv_nkcu_dialog_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="100dp"
+            android:textSize="@dimen/font_72dp"
+            android:textColor="@color/fontColor"
+            android:text="請問此動作是否已經完成協助?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="300dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/bt_nkcu_dialog_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/font_55dp"
+                android:text="尚未完成"/>
+            <Button
+                android:id="@+id/bt_nkcu_dialog_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/fontColor"
+                android:textSize="@dimen/font_55dp"
+                android:text="已完成"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

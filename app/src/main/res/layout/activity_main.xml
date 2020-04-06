@@ -1,0 +1,1269 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentsColor"
+    android:orientation="vertical"
+    android:id="@+id/ly_nkcu_full">
+
+    <!-- 第一排 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/contentsColor">
+
+        <RelativeLayout
+            android:id="@+id/ry_patient_context"
+            android:layout_width="700dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_for_layout_white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_y_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shape_new"
+                        android:text="Y"
+                        android:textColor="@color/fontColor"
+                        android:textSize="150dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_p_bed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_y_icon"
+                        android:src="@mipmap/new_bed" />
+
+                    <TextView
+                        android:id="@+id/tv_p_bed_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_y_icon"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="40dp"
+                        android:text="7C13 - A"
+                        android:textColor="@color/fontColor"
+                        android:textSize="82dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_p_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="right"
+                        android:textColor="@color/fontColor"
+                        android:text="男性"
+                        android:textSize="55dp" />
+                    <TextView
+                        android:id="@+id/tv_p_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:text="王大明"
+                        android:textColor="@color/fontColor"
+                        android:textSize="90dp" />
+                    <TextView
+                        android:id="@+id/tv_p_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_p_name"
+                        android:layout_marginTop="60dp"
+                        android:text="56歲/65公斤"
+                        android:textColor="@color/fontColor"
+                        android:textSize="52dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="1400dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_for_layout">
+            <RelativeLayout
+                android:id="@+id/ry_person_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_for_corner">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="個案資訊"
+                    android:textColor="#FFFFFF"
+                    android:textSize="55dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ry_patient_talk"
+                android:layout_width="285dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ry_person_info"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_patient_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:text="慣用閩南語"
+                    android:textColor="@color/fontColor"
+                    android:textSize="55dp" />
+
+                <TextView
+                    android:id="@+id/tv_patient_status1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_patient_language"
+                    android:layout_alignLeft="@id/tv_patient_language"
+                    android:text="聽覺障礙"
+                    android:textColor="@color/fontColor"
+                    android:textSize="55dp" />
+
+                <TextView
+                    android:id="@+id/tv_patient_status2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_patient_status1"
+                    android:layout_alignLeft="@id/tv_patient_language"
+                    android:text="視力障礙"
+                    android:textColor="@color/fontColor"
+                    android:textSize="55dp" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/view_patient_talk"
+                android:layout_width="5dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="120dp"
+                android:layout_toRightOf="@+id/ry_patient_talk"
+                android:background="@color/fontColor" />
+            <!-- 主治醫生 -->
+            <RelativeLayout
+                android:id="@+id/ry_persons_doctor"
+                android:layout_width="785dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ry_person_info"
+                android:layout_toRightOf="@+id/view_patient_talk">
+
+                <TextView
+                    android:id="@+id/label_patients_doctor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_82dp"
+                    android:gravity="center_vertical|left"
+                    android:text="主治醫生"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/font_55dp" />
+
+                <TextView
+                    android:id="@+id/tv_patients_doctor1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@+id/label_patients_doctor"
+                    android:text="王俊弘#42"
+                    android:textColor="@color/fontColor"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:id="@+id/tv_patients_doctor2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_toRightOf="@+id/tv_patients_doctor1"
+                    android:text="林淑莉#72"
+                    android:textColor="@color/fontColor"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:id="@+id/label_patients_nurse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_patients_doctor"
+                    android:layout_alignParentRight="@+id/label_patients_doctor"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_82dp"
+                    android:text="護理師"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/font_55dp" />
+
+                <TextView
+                    android:id="@+id/tv_patients_nurse1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_patients_doctor1"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/label_patients_nurse"
+                    android:text="張小玲#32"
+                    android:textColor="@color/fontColor"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:id="@+id/tv_patients_nurse2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_patients_doctor2"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/tv_patients_nurse1"
+                    android:text="陳美華#52"
+                    android:textColor="@color/fontColor"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:id="@+id/label_check_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/label_patients_nurse"
+                    android:layout_alignParentRight="@+id/label_patients_doctor"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_82dp"
+                    android:gravity="center_vertical|left"
+                    android:text="查房時間"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/font_55dp" />
+
+                <TextView
+                    android:id="@+id/tv_schedule_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_patients_nurse2"
+                    android:layout_toRightOf="@+id/label_check_time"
+                    android:text="周三,五 上午11:00"
+                    android:textColor="@color/fontColor"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_schedule_1"
+                    android:layout_toRightOf="@+id/label_check_time"
+                    android:text="周二,四 下午14:00"
+                    android:textColor="@color/fontColor"
+                    android:textSize="48dp" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/view_patients_doctor"
+                android:layout_width="5dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="120dp"
+                android:layout_toRightOf="@+id/ry_persons_doctor"
+                android:background="@color/fontColor" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ry_person_info"
+                android:layout_toRightOf="@+id/view_patients_doctor">
+
+                <TextView
+                    android:id="@+id/tv_p_care"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="46dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_black_48dp"
+                    android:textColor="@color/fontColor"
+                    android:text="照護/聯絡人" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ry_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_for_layout">
+
+            <LinearLayout
+                android:id="@+id/ly_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/dialogColor"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_p_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="三\n月"
+                        android:textColor="@color/fontColor"
+                        android:textSize="72dp" />
+
+                    <TextView
+                        android:id="@+id/tv_p_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="24"
+                        android:textColor="@color/fontColor"
+                        android:textSize="188dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_yyweek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:text="2019 星期三"
+                    android:textColor="@color/fontColor"
+                    android:textSize="55dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 第二排&第三排 -->
+    <View
+        android:layout_width="@dimen/view_9_width"
+        android:layout_height="@dimen/view_9_height"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+        <!-- 照護紀錄 & 今日排程 & 警示 layout -->
+        <LinearLayout
+            android:layout_width="2110dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- 照護紀錄 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1100dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_for_layout">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_nkcu_corner"
+                    android:gravity="center"
+                    android:text="照護紀錄"
+                    android:textColor="@color/dialogColor"
+                    android:textSize="@dimen/font_55dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_lang_chinese"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1850dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:text="中"
+                        android:background="@drawable/shape_oval_background"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp" />
+
+                    <TextView
+                        android:id="@+id/tv_lang_english"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="EN"
+                        android:background="@drawable/shape_oval_background"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp" />
+
+                    <TextView
+                        android:id="@+id/tv_lang_indonesia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="ID"
+                        android:background="@drawable/shape_oval_background"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp" />
+
+                    <TextView
+                        android:id="@+id/tv_lang_vietnam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="VN"
+                        android:background="@drawable/shape_oval_background"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ry_care"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="@color/fontColor"
+                            android:textSize="128dp"
+                            android:text="Upload OK \n Please Wait Reload.."/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/ry_care_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_label_io"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="  I / O \n 攝取/排出 紀錄 :"
+                        android:textColor="@color/fontColor"
+                        android:textSize="128dp" />
+
+                    <TextView
+                        android:id="@+id/tv_label_io_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_label_io"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="50dp"
+                        android:text="請輸入 攝取資料 :"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp" />
+                    <EditText
+                        android:id="@+id/et_io_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="單位"
+                        android:textSize="@dimen/font_72dp"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine = "true"
+                        android:inputType="number"
+                        android:layout_toRightOf="@+id/tv_label_io_input"
+                        android:layout_alignTop="@+id/tv_label_io_input"/>
+                    <TextView
+                        android:id="@+id/tv_label_io_output"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_label_io_input"
+                        android:layout_alignLeft="@+id/tv_label_io_input"
+                        android:layout_marginTop="50dp"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_72dp"
+                        android:text="請輸入 排出資料 :"/>
+                    <EditText
+                        android:id="@+id/et_io_output"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_io_input"
+                        android:layout_alignTop="@+id/tv_label_io_output"
+                        android:layout_toRightOf="@+id/tv_label_io_output"
+                        android:hint="單位"
+                        android:textSize="@dimen/font_72dp"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine = "true"
+                        android:inputType="number" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_label_io_output"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_io_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="取消"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+
+                        <Button
+                            android:id="@+id/bt_io_send"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="送出"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_55dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!-- 六組 layout -->
+                <RelativeLayout
+                    android:id="@+id/ry_care_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/ly_care_1"
+                        android:layout_width="600dp"
+                        android:layout_height="400dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/shape_shadow"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="I / O "
+                            android:textColor="@color/fontColor"
+                            android:textSize="128dp" />
+
+                        <TextView
+                            android:id="@+id/tv_io"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="攝取 / 排出"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                    </LinearLayout>
+                    <!-- 分隔線 -->
+                    <ImageView
+                        android:layout_width="5dp"
+                        android:layout_height="400dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/ly_care_1"
+                        android:background="@color/fontColor" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_care_2"
+                        android:layout_width="600dp"
+                        android:layout_height="400dp"
+                        android:layout_alignTop="@+id/ly_care_1"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toRightOf="@+id/ly_care_1"
+                        android:background="@drawable/shape_shadow"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="拍背/翻身"
+                            android:textColor="@color/fontColor"
+                            android:textSize="88dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+                            android:text="完成紀錄"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                    </LinearLayout>
+                    <!-- 分隔線 -->
+                    <ImageView
+                        android:layout_width="5dp"
+                        android:layout_height="400dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/ly_care_2"
+                        android:background="@color/fontColor" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_care_3"
+                        android:layout_width="600dp"
+                        android:layout_height="400dp"
+                        android:layout_alignTop="@+id/ly_care_2"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toRightOf="@+id/ly_care_2"
+                        android:background="@drawable/shape_shadow"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="抽痰"
+                            android:textColor="@color/fontColor"
+                            android:textSize="88dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+                            android:text="完成紀錄"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                    </LinearLayout>
+                    <!-- 分隔線 -->
+                    <ImageView
+                        android:id="@+id/iv_divider"
+                        android:layout_width="2010dp"
+                        android:layout_height="5dp"
+                        android:layout_below="@+id/ly_care_1"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/fontColor" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_care_4"
+                        android:layout_width="600dp"
+                        android:layout_height="400dp"
+                        android:layout_below="@+id/ly_care_1"
+                        android:layout_alignLeft="@+id/ly_care_1"
+                        android:layout_marginTop="70dp"
+                        android:background="@drawable/shape_shadow"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="用藥"
+                            android:textColor="@color/fontColor"
+                            android:textSize="88dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="完成紀錄"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                    </LinearLayout>
+                    <!-- 分隔線 -->
+                    <ImageView
+                        android:layout_width="5dp"
+                        android:layout_height="400dp"
+                        android:layout_below="@+id/iv_divider"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@+id/ly_care_4"
+                        android:background="@color/fontColor" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_care_5"
+                        android:layout_width="600dp"
+                        android:layout_height="400dp"
+                        android:layout_alignLeft="@+id/ly_care_2"
+                        android:layout_alignTop="@+id/ly_care_4"
+                        android:layout_toRightOf="@+id/ly_care_4"
+                        android:background="@drawable/shape_shadow"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="關節運動"
+                            android:textColor="@color/fontColor"
+                            android:textSize="88dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="完成紀錄"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                    </LinearLayout>
+                    <!-- 分隔線 -->
+                    <ImageView
+                        android:layout_width="5dp"
+                        android:layout_height="400dp"
+                        android:layout_below="@+id/iv_divider"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@+id/ly_care_5"
+                        android:background="@color/fontColor" />
+
+                    <LinearLayout
+                        android:id="@+id/ly_care_6"
+                        android:layout_width="600dp"
+                        android:layout_height="400dp"
+                        android:layout_alignTop="@+id/ly_care_5"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toRightOf="@+id/ly_care_5"
+                        android:background="@drawable/shape_shadow"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="換藥"
+                            android:textColor="@color/fontColor"
+                            android:textSize="88dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+                            android:text="完成紀錄"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>  <!-- 照護紀錄 End -->
+            <!-- 今日排程 & 警示 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <!-- 今日排程 layout -->
+                <LinearLayout
+                    android:layout_width="1050dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_for_layout">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_nkcu_corner"
+                        android:gravity="center"
+                        android:text="今日排程"
+                        android:textColor="@color/dialogColor"
+                        android:textSize="@dimen/font_55dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <!-- 今日排程-照護 Layout-->
+                        <LinearLayout
+                            android:layout_width="525dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/tv_label_care"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="照護"
+                                android:textColor="@color/fontColor"
+                                android:textSize="@dimen/font_72dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <!-- 三組時間 Layout -->
+                                <LinearLayout
+                                    android:layout_width="225dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_c_time1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="20dp"
+                                        android:gravity="center"
+                                        android:text="10:30"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_55dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_c_dscr1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="25dp"
+                                        android:text="翻背/翻身"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_35dp" />
+                                    <TextView
+                                        android:id="@+id/tv_c_time2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="20dp"
+                                        android:gravity="center"
+                                        android:text="12:30"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_55dp" />
+                                    <TextView
+                                        android:id="@+id/tv_c_dscr2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="25dp"
+                                        android:text="翻背/翻身"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_35dp" />
+                                    <TextView
+                                        android:id="@+id/tv_c_time3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="20dp"
+                                        android:gravity="center"
+                                        android:text="17:00"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_55dp" />
+                                    <TextView
+                                        android:id="@+id/tv_c_dscr3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="25dp"
+                                        android:text="關節運動"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_35dp" />
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="5dp"
+                                    android:layout_height="320dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@color/grayColor" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_p_care_time"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="40dp"
+                                        android:gravity="center"
+                                        android:text="12:30"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_72dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_p_care_dscr"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="拍背/翻身"
+                                        android:textColor="@color/fontColor"
+                                        android:textSize="@dimen/font_55dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="5dp"
+                            android:layout_height="400dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/fontColor" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="診療"
+                                android:textColor="@color/fontColor"
+                                android:textSize="@dimen/font_72dp" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:id="@+id/tv_d_time1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:text="09:30"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_55dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_d_dscr1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_d_time1"
+                                    android:layout_alignLeft="@id/tv_d_time1"
+                                    android:gravity="center"
+                                    android:text="換藥"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_35dp" />
+                                <TextView
+                                    android:id="@+id/tv_d_time2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_d_time1"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:text="11:00"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_55dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_d_dscr2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_d_time1"
+                                    android:layout_alignLeft="@id/tv_d_time2"
+                                    android:layout_marginTop="120dp"
+                                    android:gravity="center"
+                                    android:text="醫生查房"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_35dp" />
+                                <TextView
+                                    android:id="@+id/tv_d_time3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_d_time2"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:text="16:00"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_55dp" />
+                                <TextView
+                                    android:id="@+id/tv_d_dscr3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="120dp"
+                                    android:layout_below="@+id/tv_d_time2"
+                                    android:layout_alignLeft="@id/tv_d_time2"
+                                    android:gravity="center"
+                                    android:text="抽血"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_35dp" />
+
+                                <ImageView
+                                    android:layout_width="5dp"
+                                    android:layout_height="320dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_toRightOf="@+id/tv_d_time1"
+                                    android:background="@color/grayColor" />
+                                <TextView
+                                    android:id="@+id/tv_p_dt_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_d_time1"
+                                    android:layout_marginLeft="60dp"
+                                    android:layout_marginTop="40dp"
+                                    android:text="11:00"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_72dp" />
+                                <TextView
+                                    android:id="@+id/tv_p_dt_dscr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/tv_d_time1"
+                                    android:layout_below="@+id/tv_p_dt_time"
+                                    android:layout_marginLeft="50dp"
+                                    android:text="醫生查房"
+                                    android:textColor="@color/fontColor"
+                                    android:textSize="@dimen/font_55dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 警示 Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_for_layout">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_nkcu_corner"
+                        android:gravity="center"
+                        android:text="警示"
+                        android:textColor="@color/dialogColor"
+                        android:textSize="@dimen/font_55dp" />
+                    <!-- 8組 警示 layout -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_alarm_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100dp"
+                            android:src="@drawable/ic_report_problem_black_128dp" />
+
+                        <TextView
+                            android:id="@+id/tv_alarm_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_alarm_icon"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginLeft="40dp"
+                            android:text="右腳禁止治療"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                        <TextView
+                            android:id="@+id/tv_alarm_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_alarm_icon"
+                            android:layout_marginTop="150dp"
+                            android:layout_marginLeft="40dp"
+                            android:textSize="@dimen/font_72dp"
+                            android:textColor="@color/fontColor"
+                            android:text="限水1200CC"/>
+
+                        <TextView
+                            android:id="@+id/tv_alarm_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_toRightOf="@+id/iv_alarm_icon"
+                            android:gravity="center"
+                            android:text="接觸隔離"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                        <TextView
+                            android:id="@+id/tv_alarm_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="120dp"
+                            android:layout_toRightOf="@+id/iv_alarm_icon"
+                            android:gravity="center"
+                            android:text="保護隔離"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                        <TextView
+                            android:id="@+id/tv_alarm_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="220dp"
+                            android:layout_toRightOf="@+id/iv_alarm_icon"
+                            android:gravity="center"
+                            android:text="病危狀況"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                        <TextView
+                            android:id="@+id/tv_alarm_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="250dp"
+                            android:layout_marginTop="320dp"
+                            android:layout_toRightOf="@+id/iv_alarm_icon"
+                            android:gravity="center"
+                            android:text="跌倒高危"
+                            android:textColor="@color/fontColor"
+                            android:textSize="@dimen/font_72dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>  <!-- 今日排程 & 警示 End -->
+        </LinearLayout>
+        <!-- 衛教推廣 & 生活輔助 .. -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+            <!-- 衛教推播 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/shape_for_layout">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_nkcu_corner"
+                    android:gravity="center"
+                    android:text="衛教推播"
+                    android:textColor="@color/dialogColor"
+                    android:textSize="@dimen/font_55dp" />
+                <ImageView
+                    android:id="@+id/iv_ad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/new_mask"/>
+            </LinearLayout> <!-- 衛教推播 End -->
+            <!-- 生活輔助資訊 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/shape_for_layout">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="生活輔助資訊"
+                    android:textColor="@color/fontColor"
+                    android:textSize="55dp" />
+                <LinearLayout
+                    android:id="@+id/ry_lifeinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_ncku_announcement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:drawableTop="@mipmap/new_announcement"
+                        android:text=" 最新公告"
+                        android:textSize="@dimen/font_38dp"
+                        android:textColor="@color/fontColor"/>
+
+                    <TextView
+                        android:id="@+id/tv_ncku_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:drawableTop="@mipmap/new_ncku"
+                        android:text=" 關於成醫"
+                        android:textColor="@color/fontColor"
+                        android:textSize="@dimen/font_38dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_ncku_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:drawableTop="@mipmap/new_exit"
+                        android:textSize="@dimen/font_38dp"
+                        android:textColor="@color/fontColor"
+                        android:text=" 樓層地圖"/>
+                </LinearLayout>
+            </LinearLayout> <!-- 生活輔助資訊 End-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_p_updatetime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="前次更新時間: 2020/03/20 15:00"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/font_38dp" />
+            </LinearLayout>
+            <!-- 今日問候 & 呼叫鈴 Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shape_for_layout">
+                <TextView
+                    android:id="@+id/tv_how_feel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/new_pv00"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:drawablePadding="2dp"
+                    android:text="今日好嗎?"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/font_38dp" />
+                <!-- 分割線 -->
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/fontColor" />
+                <TextView
+                    android:id="@+id/tv_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@mipmap/new_bell"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:drawablePadding="2dp"
+                    android:text="呼叫鈴"
+                    android:textColor="@color/fontColor"
+                    android:textSize="@dimen/font_38dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
